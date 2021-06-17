@@ -1,0 +1,1287 @@
+<!-- wp:html -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
+<style>
+
+
+  .uniiq-survey-engineering-form {
+    box-sizing: border-box;
+    letter-spacing: 0.03em;
+    font-family: 'Noto Sans JP', sans-serif;
+
+  }
+  .uniiq-survey-engineering-form label {
+    margin-bottom: 0;
+  }
+  .uniiq-survey-engineering-form body {
+    background-color: #f1f1f1;
+  }
+
+  .uniiq-survey-engineering-form #regForm_ENG {
+    background-color: #ffffff;
+    margin: 0 auto;
+    /* width: 70%; */
+    /* max-width: 40rem; */
+    border-radius: 3px;
+    overflow: hidden;
+
+  }
+
+  .uniiq-survey-engineering-form .mainRegContent {
+    padding: 20px 30px 30px 30px;
+  }
+
+  .uniiq-survey-engineering-form h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto 0 auto;
+  }
+
+  .uniiq-survey-engineering-form h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px auto 0 auto;
+    color: #aaaaaa;
+  }
+
+  .uniiq-survey-engineering-form input[text] {
+    padding: 10px;
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+  }
+
+  /* Mark input boxes that gets an error on validation: */
+  .uniiq-survey-engineering-form input.invalid {
+    background-color: #ffdddd;
+  }
+
+  /* Hide all steps by default: */
+  .uniiq-survey-engineering-form .tab {
+    display: none;
+  }
+
+  .uniiq-survey-engineering-form button {
+    background-color: #2d7af1;
+    color: #ffffff;
+    border: none;
+    padding: 7px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px 0 rgb(76 81 101 / 20%);
+
+  }
+
+  .uniiq-survey-engineering-form button:hover {
+    background-color: #2669ce;
+    transition-duration: 100ms;
+  }
+
+  .uniiq-survey-engineering-form #prevBtn_ENG {
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    color: #808080;
+    padding: 0;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .uniiq-survey-engineering-form .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .uniiq-survey-engineering-form .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .uniiq-survey-engineering-form .step.finish {
+    background-color: #2d7af1;
+  }
+
+  .uniiq-survey-engineering-form .stepBar {
+    background-color: #2d7af1;
+    width: 50%;
+    height: 5px;
+    transition-duration: 300ms;
+  }
+
+  .uniiq-survey-engineering-form .formImg {
+    background-image: url("http://uniiq.com/wp-content/uploads/2021/05/thisisengineering-raeng-x5qZYxqzI_M-unsplash-1.jpg");
+    /* background-position: 90%; */
+    width: 100%;
+    height: 150px;
+    background-size: 100%;
+    background-position-y: 29%;
+    /* background-repeat: no-repeat; */
+  }
+
+  .uniiq-survey-engineering-form .buttonRow {
+    display: flex;
+    margin: 10px 0 0 0;
+    justify-content: flex-end;
+  }
+
+  .uniiq-survey-engineering-form .aysBtnRow {
+    display: none;
+    margin: 10px 0 0 0;
+    justify-content: space-between;
+  }
+
+  .uniiq-survey-engineering-form .radioContainer input[type=radio] {
+    height: 15px;
+    width: 15px;
+    /* margin: 10px; */
+  }
+
+  .uniiq-survey-engineering-form .radioContainer p {
+    margin: 0px;
+font-size: 0.9rem;
+  }
+
+  .uniiq-survey-engineering-form .radioHolder {
+    display: flex;
+    align-items: center;
+    margin: 10px
+  }
+
+  .uniiq-survey-engineering-form input[type="text"], input[type="email"], input[type="number"] {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #eee;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    margin: 20px 0;
+  }
+
+  .uniiq-survey-engineering-form .radioContainer input[type="text"], .radioContainer input[type="email"], .radioContainer input[type="number"]{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 13px;
+    margin: 8px 8px 8px 0;
+    box-shadow: 0 3px 6px 0 rgb(76 81 101 / 5%);
+  }
+
+  .uniiq-survey-engineering-form input[type="text"]:focus, input[type="email"]:focus,  input[type="number"]:focus{
+    outline: none;
+  }
+
+  .uniiq-survey-engineering-form .radioContainer {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(226, 226, 226);
+    border-width: 1px;
+    border-top-width: 0;
+    color: #808080;
+    transition-duration: 150ms;
+  }
+
+
+  .uniiq-survey-engineering-form .radioContainer:first-child {
+    border-top-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .uniiq-survey-engineering-form .radioContainer:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .uniiq-survey-engineering-form .radioContainer:hover {
+    background-color: #f0f0f0;
+    transition-duration: 150ms;
+  }
+
+  .uniiq-survey-engineering-form .formAnswerSheet {
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .uniiq-survey-engineering-form .mainRegContent {
+      padding: 30px 5px;
+      /* padding-top: 30px; */
+    }
+
+    .uniiq-survey-engineering-form h1 {
+      font-size: 1.5rem;
+    }
+
+    .uniiq-survey-engineering-form h2 {
+      font-size: 1rem;
+    }
+
+    .uniiq-survey-engineering-form .formImg {
+      height: 100px;
+    }
+
+    .uniiq-survey-engineering-form .buttonRow {
+      margin: 20px 20px 0 20px;
+    }
+
+    .uniiq-survey-engineering-form .closeButton {
+      margin: 0 20px;
+    }
+  }
+
+  .uniiq-survey-engineering-form .checkmarkDone {
+    padding: 30px;
+    height: 150px;
+    width: 150px;
+    background-color:rgb(245, 245, 245);
+    border-radius: 10rem;
+    margin: 50px auto 20px auto;
+    box-shadow: 0 3px 6px 0 rgb(76 81 101 / 20%);
+  }
+
+  .uniiq-survey-engineering-form .errorMessage {
+    width: 100%;
+    background-color: #fdeff1;
+    border-radius: 4px;
+    display: none;
+    padding: 10px;
+    margin: 20px 0;
+    align-content: center;
+    align-items: center;
+  }
+
+  .uniiq-survey-engineering-form .errorMessage p {
+    margin: 0px;
+    font-size: 0.8rem;
+    color: #ef6277;
+  }
+
+  .uniiq-survey-engineering-form .closeButton {
+    text-align: end;
+  }
+
+  .uniiq-survey-engineering-form select {
+    font-size: 0.9rem;
+    margin: 20px 0;
+    padding-left: 10px;
+    letter-spacing: 0px;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    border-color: rgb(226, 226, 226);
+    color: #808080;
+    outline: none;
+  }
+  
+  textarea {
+  resize: none;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 1rem;
+  border-color: rgb(226, 226, 226);
+  border-radius: 4px;
+  font-family: inherit;
+  /* outline: ; */
+  padding: 10px;
+  outline: none;
+}
+
+</style>
+
+
+<div class="uniiq-survey-engineering-form">
+  <form id="regForm_ENG">
+    <div class="stepBar"></div>
+    <div class="formImg"></div>
+    <div class="mainRegContent">
+      <!-- One "tab" for each step in the form: -->
+      <div class="closeButton"><a onclick="closePopup_ENG()">✕</a></div>
+      <div class="errorMessage"><p id="em_ENG">Please select an option.</p></div>
+
+      <!--EXTRA POP UP (SIGN INTO UNIIQ / SIGN UP)-->
+
+      <div id="extraPopUp" style="display: flex; justify-content: center; position: absolute;background-color: #D4AF37; margin:auto;">
+        <div style="background-color:#FFF; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-top:20px solid #D4AF37">
+        <form>
+            <div class="closeButton"><a style="cursor: pointer;margin-right:1.5rem;" onclick="closeExtraPopUp()">✕</a></div>
+            <img style="padding-top:3rem;padding-right:3rem;padding-left:3rem" src="logo.png">
+            <h1>Sign up</h1>
+            <div style="padding-left:2rem;padding-top: 2rem;padding-right: 2rem;">
+            <label>First name</label>
+            <input type="text">
+            <label>Last name</label>
+            <input type="text">
+            <label>Password</label>
+            <input type="text">
+            <label>Confirm password</label>
+            <input type="text">
+            <button style="background-color:#D4AF37;color:#FFF"><a style="text-decoration: none;color:#FFF" href="http://uniiq.com/login/">Login</a></button>
+            <button style="background-color:#D4AF37;color:#FFF"><a style="text-decoration: none;color:#FFF" href="http://uniiq.com/sign-up/">Sign up</a></button>
+        </div>
+        </form>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script>
+  // Closes popup window when using Pop-up builder plugin
+  function closeExtraPopUp(){
+    const extraPopUp = document.querySelector('#extraPopUp');
+    extraPopUp.style.display  = "none";
+  }
+</script>
+      </div>
+
+      <!-- TAB ONE -->
+      <div class="tab">
+        <h1>What engineering lecturer/s do you need?</h1>
+        <h2>i.e. for which faculty</h2>
+        <!-- <h2>Tell us your topic/subject requirement</h2> -->
+        <div class="formAnswerSheet checkboxForm">
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="asap" name="entry.417165073" value="Electrical &amp; Electronic Engineering">
+            </div>
+              <p>Electrical &amp; Electronic Engineering</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="fewDays" name="entry.417165073" value="General Engineering">
+            </div>
+              <p>General Engineering</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="fewWeeks" name="entry.417165073" value="Mechanical &amp; Aerospace Engineering">
+            </div>
+              <p>Mechanical &amp; Aerospace Engineering</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="iplan" name="entry.417165073" value="Chemical Engineering">
+            </div>
+              <p>Chemical Engineering</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="iplan" name="entry.417165073" value="Civil Engineering">
+            </div>
+              <p>Civil Engineering</p>
+          </label>
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="other-1" name="entry.417165073" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" for="other" id="other" type="text" placeholder="Other" name="entry.417165073.other_option_response">
+          </label>
+        </div>
+      </div>
+      <div class="tab" id="dynamic1">
+        <h1>That's great we have got lots of x lecturers</h1>
+        <h2>Tell us your topic/subject requirement</h2>
+        <div class="formAnswerSheet checkboxForm">
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="radio" id="other-1" name="entry.1135029757" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" for="other" id="other" type="text" placeholder="Topic/s" name="entry.1135029757.other_option_response">
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="iplan" name="entry.1135029757" value="Not applicable">
+            </div>
+              <p>Not applicable</p>
+          </label>
+        </div>
+      </div>
+      <!-- TAB TWO -->
+      <div class="tab">
+        <h1>Lecturing arrangement</h1>
+        <h2>Which of these options would you prefer?</h2>
+        <div class="formAnswerSheet checkboxForm">
+          
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="onceOrTwice" name="entry.320607180" value="Specialist lecturer with a series of lectures ready to go">
+            </div>
+            <p>Specialist lecturer with a series of lectures ready to go</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="notSure" name="entry.320607180" value="Specialist lecturer to deliver our content">
+            </div>
+            <p>Specialist lecturer to deliver our content</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="moreThanOnce" name="entry.320607180" value="Once-off international guest lecturer (online)">
+            </div>
+            <p>Once-off international guest lecturer (online)</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="weekly" name="entry.320607180" value="Once-off domestic guest lecturer">
+            </div>
+            <p>Once-off domestic guest lecturer</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="discuss" name="entry.320607180" value="Industry Expert for guest lecturing">
+            </div>
+            <!-- <p>Full-time international lecturer abroad</p> -->
+            <p>Industry Expert for guest lecturing</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="discuss" name="entry.320607180" value="Any lecturer available through UniIQ">
+            </div>
+            <p>Any lecturer available through UniIQ</p>
+          </label>
+          <!-- There will only be 1 otherContainer in each tab, hence indices will work -->
+          <label class="radioContainer otherContainer"> 
+            <div class="radioHolder">
+              <input class="otherRadio" type="checkbox" id="other-3" name="entry.320607180" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" for="other" id="other" type="text" placeholder="Other" name="entry.320607180.other_option_response">
+          </label>
+        </div>
+      </div>
+      
+      <div class="tab">
+        <h1>What are your lecturing language requirements</h1>
+        <div class="formAnswerSheet checkboxForm">
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="moreThanOnce" name="entry.1818945078" value="English">
+            </div>
+            <p>English</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="onceOrTwice" name="entry.1818945078" value="Spanish">
+            </div>
+            <p>Spanish</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="notSure" name="entry.1818945078" value="Chinese">
+            </div>
+            <p>Chinese</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="notSure" name="entry.1818945078" value="Hindi">
+            </div>
+            <p>Hindi</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="notSure" name="entry.1818945078" value="Arabic">
+            </div>
+            <p>Arabic</p>
+          </label>
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="otherOften" name="entry.1818945078" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" ="other"="" id="other" type="text" placeholder="Other" name="entry.1818945078.other_option_response">
+          </label>
+        </div>
+      </div>
+      
+
+      <!-- TAB FOUR -->
+      <!-- When do you need your lecturer? -->
+      <div class="tab">
+        <h1>When do you need your lecturer?</h1>
+        <div class="formAnswerSheet radioForm">
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="algorithms" name="entry.1663479573" value="I want to find a lecturer as soon as possible">
+            </div>
+            <p>I want to find a lecturer as soon as possible</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="discreteMath" name="entry.1663479573" value="I am looking to find a lecturer within the next four weeks">
+            </div>
+            <p>I am looking to find a lecturer within the next four weeks</p>
+          </label>
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="radio" id="other-2" name="entry.1663479573" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" for="other" id="other" type="text" placeholder="Other" name="entry.1663479573.other_option_response">
+          </label>
+        </div>
+      </div>
+
+
+      <div class="tab">
+        <h1>What should be your preferred lecturing format?</h1>
+        <div class="formAnswerSheet checkboxForm">
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="onceOrTwice" name="entry.1208841890" value="On-demand pre-recorded Lectures">
+            </div>
+            <p>On-demand pre-recorded Lectures <span style="color: tomato">[Most Popular]</span></p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="moreThanOnce" name="entry.1208841890" value="Live, online">
+            </div>
+            <p>Live, online</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="notSure" name="entry.1208841890" value="In-person (Depending on COVID-19 Restrictions)">
+            </div>
+            <p>In-person (Depending on COVID-19 Restrictions)</p>
+          </label>
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="otherOften" name="entry.1208841890" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" ="other"="" id="other" type="text" placeholder="Other" name="entry.1208841890.other_option_response">
+          </label>
+        </div>
+      </div>
+
+      <!-- TAB FOUR -->
+      <!-- <div class="tab">
+        <h1>CHECKMARK DEMO</h1>
+        <div class="formAnswerSheet checkboxForm">
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="moreThanOnce" name="entry.1242240986" value="More than once a week">
+            </div>
+            <p>Online</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="onceOrTwice" name="entry.1242240986" value="Once or twice a month">
+            </div>
+            <p>Pre-recorded</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="notSure" name="entry.1242240986" value="I'm not sure yet">
+            </div>
+            <p>In-person</p>
+          </label>
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="checkbox" id="otherOften" name="entry.1242240986" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;"="other" id="other" type="text" placeholder="Other" name="entry.1242240986.other_option_response">
+          </label>
+        </div>
+      </div> -->
+      <!-- TAB FIVE -->
+      <div class="tab">
+        <h1>We're nearly done...</h1>
+        <h2>What minimum academic level do you require?</h2>
+        <div class="formAnswerSheet radioForm">
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="onceOrTwice" name="entry.1861154507" value="Associate Lecturer">
+            </div>
+            <p>Associate Lecturer</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="onceOrTwice" name="entry.1861154507" value="Lecturer">
+            </div>
+            <p>Lecturer</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="moreThanOnce" name="entry.1861154507" value="Senior Lecturer">
+            </div>
+            <p>Senior Lecturer</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="notSure" name="entry.1861154507" value="Adjunct Professor">
+            </div>
+            <p>Adjunct Professor</p>
+          </label>
+          <label class="radioContainer">
+            <div class="radioHolder">
+              <input type="radio" id="notSure" name="entry.1861154507" value="Professor">
+            </div>
+            <p>Professor</p>
+          </label>
+          <label class="radioContainer otherContainer">
+            <div class="radioHolder">
+              <input type="radio" id="otherOften" name="entry.1861154507" value="__other_option__">
+            </div>
+            <input class="uniiq-survey-engineering-form otherText" onfocus="this.parentElement.children[0].children[0].checked = true;" ="other"="" id="other" type="text" placeholder="Other" name="entry.1861154507.other_option_response">
+          </label>
+        </div>
+      </div>
+      <div class="tab">
+        <h1>Please tell us of any other specific requirements</h1>
+        <div class="formAnswerSheet textfieldForm">          
+          <!-- <input class="textForm" for="other" id="other" type="text" placeholder="Type here" name="entry.2084649734"> -->
+          <textarea name="entry.267999097" placeholder="Leave us with any requirements that you may require."></textarea>
+        </div>
+      </div>
+      <div class="tab">
+        <h1>Which country is your campus?</h1>
+        <div class="selectDropdown">
+          <select id="country" name="entry.674481117" class="form-control">
+            <option value="noselect">Select a country</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Åland Islands">Åland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cote D'ivoire">Cote D'ivoire</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guernsey">Guernsey</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-bissau">Guinea-bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Isle of Man">Isle of Man</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jersey">Jersey</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+            <option value="Korea, Republic of">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macao">Macao</option>
+            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Martinique">Martinique</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mayotte">Mayotte</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+            <option value="Moldova, Republic of">Moldova, Republic of</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Nauru">Nauru</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Netherlands Antilles">Netherlands Antilles</option>
+            <option value="New Caledonia">New Caledonia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niue">Niue</option>
+            <option value="Norfolk Island">Norfolk Island</option>
+            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+            <option value="Norway">Norway</option>
+            <option value="Oman">Oman</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau">Palau</option>
+            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Pitcairn">Pitcairn</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Reunion">Reunion</option>
+            <option value="Romania">Romania</option>
+            <option value="Russian Federation">Russian Federation</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Saint Helena">Saint Helena</option>
+            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+            <option value="Saint Lucia">Saint Lucia</option>
+            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+            <option value="Samoa">Samoa</option>
+            <option value="San Marino">San Marino</option>
+            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Serbia">Serbia</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+            <option value="Swaziland">Swaziland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+            <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor-leste">Timor-leste</option>
+            <option value="Togo">Togo</option>
+            <option value="Tokelau">Tokelau</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Virgin Islands, British">Virgin Islands, British</option>
+            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+            <option value="Wallis and Futuna">Wallis and Futuna</option>
+            <option value="Western Sahara">Western Sahara</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+        </div>
+      </div>
+      <div class="tab">
+        <h1>Which institution do you work for?</h1>
+        <div class="formAnswerSheet textfieldForm">          
+          <input class="textForm" for="other" id="other" type="text" placeholder="Institution" name="entry.1110542104">
+        </div>
+      </div>
+      <!-- TAB SIX -->
+      <div class="tab">
+        <h1>Searching for available global academics.</h1>
+        <div class="checkmarkDone loadingForm" style="padding: 0;">          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: transparent; display: block; shape-rendering: auto;" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+          <circle cx="50" cy="50" fill="none" stroke="#0090ff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+            <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+          </circle>
+          </svg>
+        </div>
+      </div>
+      <div class="tab">
+        <h1>What's your First name?</h1>
+        <div class="formAnswerSheet textfieldForm">          
+          <input class="textForm" for="other" id="other" type="text" placeholder="First name" name="entry.1063401981">
+        </div>
+      </div>
+
+      <div class="tab">
+        <h1>What's your Last name?</h1>
+        <div class="formAnswerSheet textfieldForm">          
+          <input class="textForm" for="other" id="other" type="text" placeholder="Last name" name="entry.390303019">
+        </div>
+      </div>
+      <!-- DEMO TAB -->
+      <div class="tab">
+        <h1>What is your email address?</h1>
+        <div class="formAnswerSheet textfieldForm">          
+          <input class="textForm" for="other" id="other" type="email" placeholder="Email address" name="entry.1243005418">
+          <div style="display: flex;align-items: baseline;">
+            <input style="margin-right: 10px;" type="checkbox" id="notSure" name="entry.423908326" value="yes newsletter">
+            <p>I am happy to receive occasional marketing emails from Uni IQ</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab">
+        <h1>Finally, let's get your phone number so our team can communicate with you directly.</h1>
+        <h2>Please include your country code</h2>
+        <div class="formAnswerSheet textfieldForm">          
+          <input class="textForm phoneForm" for="other" id="other" type="text" placeholder="Phone number" name="entry.1730304056">
+        </div>
+      </div>
+      <!-- TAB SEVEN -->
+      <div class="tab">
+        <h1>Great - We've got academics ready and available for you.</h1>
+        <h2>We'll get back to you shortly.</h2>
+        <div class="checkmarkDone completedForm">
+          <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
+            <polygon fill="#43A047" points="40.6,12.1 17,35.7 7.4,26.1 4.6,29 17,41.3 43.4,14.9"></polygon>
+          </svg>
+        </div>
+      </div>
+      <div class="tab">
+        <h1>Are you sure that you want to leave?</h1>
+        <h2>We're asking a few questions so we can find you the right pros, and send you quotes fast and free!</h2>
+        <br>
+        <br>
+      </div>
+      <div style="overflow:auto;">
+        <div class="buttonRow">
+          <button type="button" id="prevBtn_ENG" onclick="nextPrev_ENG(-1)">Previous</button>
+          <button type="button" id="nextBtn_ENG" onclick="nextPrev_ENG(1)">Next</button>
+        </div>
+      </div>
+      <div style="overflow:auto;">
+        <div class="aysBtnRow">
+          <button type="button" id="prevBtn_ENG" onclick="closePopup_ENG()">Exit</button>
+          <button type="button" id="nextBtn_ENG" onclick="continueFromSaved()">Continue</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <script>
+    var currentTab_ENG = 0; // Current tab is set to be the first tab (0)
+    var areYouSureFlag_ENG = false;
+
+    showTab_ENG(currentTab_ENG); // Display the current tab
+    // document.getElementsByClassName("aysBtnRow")[0].style.display="none";
+
+    $(document).on("keypress", function(e){
+      console.log(e);
+        if(e.which == 13){
+          nextPrev_ENG(1);
+        }
+    });
+
+    function areYouSure_ENG(){
+      length = document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("tab").length;
+
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("buttonRow")[0].style.display="none";
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("aysBtnRow")[0].style.display="flex";
+      showTab_ENG(length-1);
+     
+      // if already on the page, and a close request is asked again, exit
+      if (areYouSureFlag_ENG) {
+        location.reload();
+
+        return true;
+      } 
+      
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("stepBar")[0].style.backgroundColor = "tomato";
+      // first run = false, 2nd run = true because 2nd run would trigger the first return.
+      areYouSureFlag_ENG = true;
+
+      return false;
+    }
+
+    function continueFromSaved(){
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("stepBar")[0].style.backgroundColor = "#2d7af1";
+
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("buttonRow")[0].style.display="flex";
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("aysBtnRow")[0].style.display="none";
+      
+      showTab_ENG(currentTab_ENG);
+      areYouSureFlag_ENG = false;
+    }
+
+    function validateEmail_ENG(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+    }
+
+    function showTab_ENG(n) {
+      // This function will display the specified tab of the form...
+      var x = document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("tab");
+      
+      x[currentTab_ENG].style.display = "none";
+      x[x.length-1].style.display = "none";
+
+      currentStepBar_ENG(n);
+      x[n].style.display = "block";
+      //... and fix the Previous/Next buttons:
+      if (n == 0) {
+        document.getElementById("prevBtn_ENG").style.display = "none";
+        document.getElementById("nextBtn_ENG").style.display = "inline";
+        document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("buttonRow")[0].style.justifyContent = "flex-end";
+      } else {
+        document.getElementById("prevBtn_ENG").style.display = "inline";
+        document.getElementById("nextBtn_ENG").style.display = "inline";
+
+        // console.log(getElementByClassName(:v))
+        document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("buttonRow")[0].style.justifyContent = "space-between";
+      }
+
+      const DYNAMIC1 = 1; // step of dynamic tab
+      if (n === DYNAMIC1) {
+        var formData = new FormData(document.querySelector('#regForm_ENG'));
+        var topic = "";
+        if (formData.getAll("entry.417165073").length <= 1) {
+          topic = formData.get("entry.417165073") + " ";
+          if (topic === "__other_option__ ") {
+            topic = formData.get("entry.417165073.other_option_response") + " ";
+          }
+        }
+        document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("tab")[DYNAMIC1].getElementsByTagName("h1")[0].innerHTML = "That's great we have got many " + topic + "lecturers available now.";
+      }
+    
+      if (n == (x.length - 8)) {
+        console.log(1)
+        document.getElementById("nextBtn_ENG").innerHTML = "Find";
+      }
+        // Finding academics / load page
+      else if (n == (x.length - 7) || n == (x.length - 2)) {
+        console.log(2)
+        document.getElementById("nextBtn_ENG").style.display = "none";
+        document.getElementById("prevBtn_ENG").style.display = "none";
+
+        // Finding page
+        if (n == (x.length - 7)) {
+          setTimeout(function() {
+            nextPrev_ENG(1);
+          }, 2000);
+        }
+
+        // Last page
+        if (n == (x.length - 2)) {
+          areYouSureFlag_ENG = true;
+          setTimeout(function() {
+            closePopup_ENG();
+          }, 3500);
+        }
+      }
+      else if (n == (x.length - 6)) {
+        document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("buttonRow")[0].style.justifyContent = "flex-end";
+        document.getElementById("nextBtn_ENG").innerHTML = "Next";
+        document.getElementById("prevBtn_ENG").style.display = "none";
+      }
+      else if (n == (x.length - 3)) {
+        console.log(3)
+        document.getElementById("nextBtn_ENG").innerHTML = "Submit";
+        document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("buttonRow")[0].style.justifyContent = "flex-end";
+        document.getElementById("prevBtn_ENG").style.display = "none";
+      // Every other page
+      } 
+      else {
+        console.log(4)
+        // document.getElementById("nextBtn_ENG").style.display = "inline";
+        // document.getElementById("prevBtn_ENG").style.display = "inline";
+
+        document.getElementById("nextBtn_ENG").innerHTML = "Next";
+        document.getElementById("prevBtn_ENG").innerHTML = "Previous";
+      }
+      //... and run a function that will display the correct step indicator:
+      // fixStepIndicator(n)
+    }
+
+    function currentStepBar_ENG(n) {
+      var stepSize, pages = document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("tab").length;
+      stepSize = 100/(pages-1);
+      console.log(stepSize);
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("stepBar")[0].style.width = (n+1)*stepSize + "%";
+    }
+
+    // Closes popup window when using Pop-up builder plugin
+    function closePopup_ENG(){
+      console.log("clicked on")
+      // document.getElementById("regForm_ENG").submit();
+      $(".sgpb-theme-3-overlay").click();
+    }
+
+    function nextPrev_ENG(n) {
+
+      
+      console.log("next clicked")
+      document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("errorMessage")[0].style.display = "none";
+      
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("tab");
+      if (currentTab_ENG === x.length-1) {
+        if (n > 0) {
+          return true;  
+        } else {
+          showTab_ENG(continueOff);
+          currentTab_ENG = continueOff;
+          return false;
+        }
+      }
+
+      // if at last tab, and buttons are clicked, close
+      if (currentTab_ENG >= x.length - 1) {
+        // bypassSubmitted();
+        closePopup_ENG();
+        // return;
+      }
+
+      const {valid, errMsg} = validateForm_ENG()
+      // Exit the function if any field in the current tab is invalid:
+      if (n == 1 && !valid) {
+        document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("errorMessage")[0].style.display = "block";
+        document.getElementById("em_ENG").innerHTML = errMsg;
+        return false;
+      } 
+      // Hide the current tab:
+      x[currentTab_ENG].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab_ENG = currentTab_ENG + n;
+      // if you have reached the end of the form...
+      if (currentTab_ENG >= x.length - 2) {
+        // ... the form gets submitted:
+        bypassSubmitted_ENG();
+        // return false;
+      }
+      // Otherwise, display the correct tab:
+      showTab_ENG(currentTab_ENG);
+    }
+
+    function isSelected_ENG(fields){
+      for (i = 0; i < fields.length; i++) {
+        if (fields[i].checked) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function validateForm_ENG() {
+      // This function deals with validation of the form fields
+      var tabs, currTab, fields, i, valid = true, errMsg = "";
+      tabs = document.getElementsByClassName("uniiq-survey-engineering-form")[0].getElementsByClassName("tab");
+      currTab = tabs[currentTab_ENG];
+      fields = currTab.getElementsByTagName("input");
+
+      if (!!currTab.getElementsByClassName("otherContainer")[0]) {
+        var otherSelected = currTab.getElementsByClassName("otherContainer")[0].getElementsByTagName("input")[0].checked; // other Radio/checkbox
+        var otherText = currTab.getElementsByClassName("otherContainer")[0].getElementsByTagName("input")[1].value; // other textfield
+      }
+
+      
+      var radioForm = !!currTab.getElementsByClassName("radioForm")[0];
+      var checkboxForm = !!currTab.getElementsByClassName("checkboxForm")[0];
+      var textForm = !!currTab.getElementsByClassName("textfieldForm")[0];
+      var dropdownForm = !!currTab.getElementsByClassName("selectDropdown")[0];
+
+      // if nothing wrong, return True, catch and return False, otherwise should pass right through.
+      if (radioForm) {
+        // If other button is selected and other text is empty, ask to fill up
+        if (otherSelected && otherText === "") {
+          // "Please enter value for "Other""
+          valid = false;
+          errMsg = "Please enter a value.";
+        } else if (!otherSelected) {
+          if (!isSelected_ENG(fields)) {
+            errMsg = "Please select an option.";
+            valid = false;
+          }
+        }
+      } 
+      else if (checkboxForm) {
+        // If other button is selected and other text is empty, ask to fill up
+        if (otherSelected && otherText === "") {
+          valid = false;
+          errMsg = "Please enter a value for \"Other\"."
+        } else if (!otherSelected) {
+          if (!isSelected_ENG(fields)) {
+            valid = false;
+            errMsg = "Please select an option.";
+          }
+        }
+      }
+      else if (textForm) {
+        if (currTab.getElementsByClassName("textfieldForm")[0].getElementsByTagName("input").length > 0) {
+          if (currTab.getElementsByClassName("textfieldForm")[0].getElementsByTagName("input")[0].type === "email") {
+            if (!validateEmail_ENG(currTab.getElementsByClassName("textfieldForm")[0].getElementsByTagName("input")[0].value)) {
+              valid = false;
+              errMsg = "Please type in a valid email.";  
+            }
+          }
+  
+          if (currTab.getElementsByClassName("textfieldForm")[0].getElementsByTagName("input")[0].placeholder === "Phone number") {
+            if (!validatePhoneNumber_ENG(currTab.getElementsByClassName("textfieldForm")[0].getElementsByTagName("input")[0].value)) {
+              valid = false;
+              errMsg = "Please type in a valid phone number.";  
+            }
+          }
+          
+          if (currTab.getElementsByClassName("textfieldForm")[0].getElementsByTagName("input")[0].value === "") {
+            valid = false;
+            errMsg = "Please type in an answer.";
+          }
+        }
+      }
+      else if (dropdownForm) {
+        if (currTab.getElementsByClassName("selectDropdown")[0].getElementsByTagName("select")[0].value === "noselect") {
+          valid = false;
+          errMsg = "Please select your country.";
+        }
+      }
+
+      return {valid: valid, errMsg: errMsg};
+    }
+
+    function validatePostcode_ENG(postcode){
+      return /^\d\d\d\d$/.test(postcode)
+    }
+
+    function validatePhoneNumber_ENG(ph) {
+      return (/^\d{7,}$/).test(ph.replace(/[\s()+\-\.]|ext/gi, ''));
+    }
+
+    // https://dev.to/utkarshdhiman48/custom-frontend-for-google-form-456l
+    let url_ENG = "https://docs.google.com/forms/d/e/1FAIpQLSdDh-5L-Nm4MtHFr3J-kyipPGwAeHjUYIfHat4hBRDyJfraxg/formResponse"; //action url
+
+    function bypassSubmitted_ENG() {
+      var formData = new FormData(document.querySelector('#regForm_ENG')); 
+
+      fetch(url_ENG,{
+          method: "POST",
+          mode: "no-cors",
+          header:{
+              'Content-Type': 'application/json'
+              },
+          body: formData
+      })
+      .then(data=>{
+          console.log(formData);
+      })
+      .catch(err=>console.error(err)); //promise based
+    }
+
+</script>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
